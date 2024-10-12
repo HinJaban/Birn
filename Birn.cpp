@@ -3,11 +3,13 @@
 struct date
 {
     int month, day, year;
+    void set(int,int,int);
+    void get(int*,int*,int*);
+    void next();
+    void print();
 };
 date today;
-void set_date(date*,int,int,int);
-void next_date(date*);
-void print_date(const date*);
+
 int main()
 {
     std::cout<<"Hello"<<std::endl;
