@@ -16,7 +16,10 @@ class date
     void print();
 };
 
- 
+ void date::print() //печать даты в принятом в США виде
+ {
+    std::cout<<month<<'/'<<day<<'/'<<year;
+ }
 
 int main()
 {
