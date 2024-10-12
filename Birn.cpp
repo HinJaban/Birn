@@ -16,11 +16,25 @@ class date
     void print();
 };
 
+date today;
+date my_birthday;
+void f()
+{
+    my_birthday.set(30,12,1950);//...используя стандартную запись обращения к члену структуры через точку
+    today.set(18,1,1991);
+    my_birthday.print();
+    today.next();
+}
+
  void date::print() //печать даты в принятом в США виде
  {
     std::cout<<month<<'/'<<day<<'/'<<year;
  }
-
+/*Однако от функций не членов частные члены класса date уже ограждены:*/
+void backdate()
+{
+    today.day--; //ошибка
+}
 int main()
 {
 
